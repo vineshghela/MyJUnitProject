@@ -1,8 +1,8 @@
 package com.QA;
 
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
@@ -27,4 +27,18 @@ public class AppTest
     {
         assertTrue( true );
     }
+
+    @Test
+    public void notEmpty(){
+        app = new App();
+        assertNotNull(app.addTwo(5,6));
+    }
+
+    @Test
+    public void checkSame(){
+        app = new App();
+        assertEquals(1, app.addTwo(1,5));
+    }
 }
+
+

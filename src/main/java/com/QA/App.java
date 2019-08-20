@@ -8,4 +8,9 @@ public class App {
         System.out.println(args[0]);
         System.out.println("Hello World!");
     }
+
+    public int addTwo(int a, int b){
+        System.out.println(a);
+        return a;
+    }
 }
