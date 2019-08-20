@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class AppTest 
 {
     private App app;
+    private BlackJackGame blackJackGame;
 
     @Test
     public void mainTest(){
@@ -39,6 +40,21 @@ public class AppTest
         app = new App();
         assertEquals(1, app.addTwo(1,5));
     }
+
+
+    @Test
+    public void blackJackTest(){
+        blackJackGame = new BlackJackGame();
+        assertEquals(21,blackJackGame.blackJackGameTesting(21,3));
+        assertEquals(21,blackJackGame.blackJackGameTesting(3,21));
+        assertEquals(21,blackJackGame.blackJackGameTesting(21,21));
+        assertEquals(2,blackJackGame.blackJackGameTesting(2,23));
+        assertEquals(0,blackJackGame.blackJackGameTesting(23,23));
+        assertEquals(0,blackJackGame.blackJackGameTesting(-23,-23));
+
+
+    }
+
 }
 
 
